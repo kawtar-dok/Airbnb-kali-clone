@@ -80,12 +80,10 @@ function Header() {
         Become a Host
        </p>
        <GlobeAltIcon className='h-6 cursor-pointer'/>
-       {/* Dark Mode  */}
-       <div className='flex items-center space-x-2 cursor-pointer'>
-        {renderThemeChange()}
-         </div>
+      
       <div className='flex items-center space-x-2 border-2 p-2 rounded-full'>
          <MenuIcon className='h-6'/>
+         {renderThemeChange()}
          <UserCircleIcon  className='h-6'/>
       </div>
      </div>
