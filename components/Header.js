@@ -76,7 +76,7 @@ function Header() {
      <div className='flex items-center justify-end space-x-4
      text-gray-500'>
         {/* Dark Mode  */}
-        <div className=' space-x-10 cursor-pointer'>
+        <div className='flex items-center space-x-10 cursor-pointer'>
         {renderThemeChange()}
          </div>
        <p className='hidden md:inline-flex cursor-pointer'>
