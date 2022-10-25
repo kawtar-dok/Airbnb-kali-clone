@@ -47,7 +47,7 @@ function Header() {
   return (
     <header  className='sticky top-0 z-50 grid grid-cols-3 bg-white
     dark:bg-gray-900 
-     shadow-md p-5 md:px-10'>
+     shadow-md p-2 md:px-10'>
      {/* a container a box its gonna be a grind layout with 3 colum*/}
    
      {/* left */}
@@ -76,7 +76,7 @@ function Header() {
      <div className='flex items-center justify-end space-x-4
      text-gray-500'>
         {/* Dark Mode  */}
-        <div>
+        <div className=' space-x-10 cursor-pointer'>
         {renderThemeChange()}
          </div>
        <p className='hidden md:inline-flex cursor-pointer'>
