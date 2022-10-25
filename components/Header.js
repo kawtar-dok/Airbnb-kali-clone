@@ -73,7 +73,7 @@ function Header() {
       </div>
     
      {/* Right */}
-     <div className='flex items-center justify-end space-x-4
+     <div className='flex items-center justify-end sm:space-x-4
      text-gray-500'>
         {/* Dark Mode  */}
         <div className='flex items-center cursor-pointer'>
