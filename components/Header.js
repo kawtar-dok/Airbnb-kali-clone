@@ -29,7 +29,7 @@ function Header() {
     if(currentTheme === "dark"){
       return (
         <SunIcon 
-         className="w-8 h-8 text-yellow-500"
+         className="w-6 h-6 text-yellow-500"
          role="button" 
          onClick={() => setTheme('light')} />
         )
@@ -37,7 +37,7 @@ function Header() {
     else {
       return(
         <MoonIcon
-        className='w-8 h-8 text-gray-900'
+        className='w-6 h-6 text-gray-900'
         role="button"
         onClick={() => setTheme('dark')} />
       )
@@ -82,8 +82,8 @@ function Header() {
        <GlobeAltIcon className='h-6 cursor-pointer'/>
       
       <div className='flex items-center space-x-2 border-2 p-2 rounded-full'>
-         <MenuIcon className='h-6'/>
          {renderThemeChange()}
+         <MenuIcon className='h-6'/>
          <UserCircleIcon  className='h-6'/>
       </div>
      </div>
