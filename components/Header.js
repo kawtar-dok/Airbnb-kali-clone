@@ -51,7 +51,7 @@ function Header() {
      {/* a container a box its gonna be a grind layout with 3 colum*/}
    
      {/* left */}
-     <div className='relative flex items-center h-10  
+     <div className='relative flex items-center h-8 md:h-10
      cursor-pointer my-auto '>
         <Image
             src="https://links.papareact.com/qd3"
@@ -82,7 +82,7 @@ function Header() {
        <p className='hidden md:inline-flex cursor-pointer'>
         Become a Host
        </p>
-       <GlobeAltIcon className='h-6 cursor-pointer'/>
+       <GlobeAltIcon className='hidden md:inline-flex h-6 cursor-pointer'/>
       <div className='flex items-center space-x-2 border-2 p-2 rounded-full'>
          <MenuIcon className='h-6'/>
          <UserCircleIcon  className='h-6'/>
