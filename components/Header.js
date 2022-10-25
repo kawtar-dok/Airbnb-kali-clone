@@ -83,7 +83,7 @@ function Header() {
         Become a Host
        </p>
        <GlobeAltIcon className='hidden md:inline-flex h-6 cursor-pointer'/>
-      <div className='flex items-center space-x-2 border-2 p-2 rounded-full'>
+      <div className='flex items-center  md:space-x-2 border-2 p-2 rounded-full'>
          <MenuIcon className='h-6'/>
          <UserCircleIcon  className='h-6'/>
       </div>
