@@ -75,14 +75,15 @@ function Header() {
      {/* Right */}
      <div className='flex items-center justify-end space-x-4
      text-gray-500'>
-        
+        {/* Dark Mode  */}
+        <div className='flex items-center cursor-pointer'>
+        {renderThemeChange()}
+         </div>
        <p className='hidden md:inline-flex cursor-pointer'>
         Become a Host
        </p>
        <GlobeAltIcon className='h-6 cursor-pointer'/>
-      
       <div className='flex items-center space-x-2 border-2 p-2 rounded-full'>
-         {renderThemeChange()}
          <MenuIcon className='h-6'/>
          <UserCircleIcon  className='h-6'/>
       </div>
