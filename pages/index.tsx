@@ -11,7 +11,7 @@ import Footer from '../components/Footer'
 const Home = ({exploreDta = [], cardData = []}) => {
   //props.exploreDta 
   return (
-    <div className="">
+    <div className="dark:text-gray-100 dark:bg-gray-900 dark:border-gray-900">
       <Head>
         <title>Kali's Airbnb</title>
         <link rel="icon" href="/icon2.ico" />
