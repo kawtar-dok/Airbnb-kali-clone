@@ -18,7 +18,7 @@ const Home = ({exploreDta = [], cardData = []}) => {
       </Head>
       
       {/* Header */}
-       <Header />
+       <Header placeholder={undefined}/>
 
       {/* Banner */}
       <Banner />

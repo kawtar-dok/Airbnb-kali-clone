@@ -15,15 +15,18 @@ import {useTheme} from "next-themes";
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import { DateRangePicker } from 'react-date-range';
+import { useRouter } from 'next/router';
 
 
-function Header() {
+function Header({ placeholder }) {
    const {systemThem, theme, setTheme} = useTheme();
    const [mounted, setMounted] = useState(false);
    const [searchInput, setSearchInput] = useState("");
    const [startDate, setStartDate] = useState(new Date());
    const [endDate, setEndDate] = useState(new Date());
    const [numberOfGuest, setNumberOfGuest] = useState(1);
+   const router = useRouter();
+   
    console.log(numberOfGuest)
    //object
    const selectionRanges = {
@@ -39,6 +42,22 @@ function Header() {
    const resetInput = () => {
      setSearchInput("");
    }
+   
+   const search = () => {
+    //router.push("/search")
+    //we can pull the information by Redux but 
+    //well we gonna use more than that
+    router.push({
+      pathname: '/search',
+      query:{
+        location: searchInput,
+        startDate: startDate.toISOString(),
+        endDate: endDate.toISOString(),
+        numberOfGuest: numberOfGuest,
+      }
+    })
+   }
+
 
    console.log(searchInput)
 
@@ -77,7 +96,9 @@ function Header() {
      {/* a container a box its gonna be a grind layout with 3 colum*/}
    
      {/* left */}
-     <div className='relative flex items-center h-8 md:h-10
+     <div 
+     onClick={() => router.push("/")}
+     className='relative flex items-center h-8 md:h-10
      cursor-pointer my-auto '>
         <Image
             src="https://links.papareact.com/qd3"
@@ -94,7 +115,7 @@ function Header() {
         type="text" 
         className='flex-grow pl-5 bg-transparent outline-none
         text-sm text-gray-600 placeholder-gray-400 dark:text-white dark:placeholder-slate-400'
-        placeholder='Start your search'
+        placeholder={placeholder || 'Start your search'}
          />
         <SearchIcon className='hidden md:inline-flex h-8 bg-red-400 text-white 
         rounded-full p-2 cursor-pointer md:mx-2'/>
@@ -149,7 +170,9 @@ function Header() {
                   onClick={resetInput}>
                     Cancel
                 </button>
-                <button className='flex-grow text-red-400'>Search</button>
+                <button 
+                  onClick={search}
+                  className='flex-grow text-red-400'>Search</button>
          </div>
       </div>
       )}

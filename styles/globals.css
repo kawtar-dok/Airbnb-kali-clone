@@ -17,3 +17,10 @@
       @apply inline-block px-5 py-3 rounded-lg hover:bg-gray-600 transition duration-300 shadow-lg bg-gray-500 text-white capitalize tracking-wider font-semibold text-sm sm:text-xl focus:outline-none focus:ring-4 focus:ring-gray-500 focus:ring-opacity-50 whitespace-nowrap
     }
   }
+
+  @layer components {
+    .button {
+      @apply px-4 py-2 border rounded-full cursor-pointer hover:shadow-lg  active:scale-95 active:bg-gray-100
+      transition duration-100 ease-out;
+    }
+  }
